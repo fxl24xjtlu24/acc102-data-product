@@ -21,15 +21,14 @@ This project investigates whether a company's ESG (Environmental, Social, Govern
 - Industry differences matter: e.g., Finance & Technology have high ESG scores but not necessarily the highest margins
 
 ## 5. How to run
-```bash
 pip install -r requirements.txt
 streamlit run app.py
 
-6. Product link / Demo
+## 6. Product link / Demo
 
 
-
-7. Limitations & next steps
+ 
+## 7. Limitations & next steps
 
 · Cross-sectional data → cannot infer causality
 · Missing control variables (firm size, leverage, R&D spending)
