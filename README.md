@@ -26,7 +26,7 @@ pip install -r requirements.txt
 streamlit run app.py
 
 ## 6. Product link / Demo
-
+Product link   https://github.com/fxl24xjtlu24/acc102-data-product.git
 
  
 ## 7. Limitations & next steps
