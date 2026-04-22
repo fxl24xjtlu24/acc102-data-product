@@ -1,6 +1,5 @@
 # acc102-data-product
 ACC102 Data Product Assignment: Python-based data analysis, visualization and insights for the course requirement.
-# acc102-data-product
 # ESG & Financial Performance Dashboard
 
 ## 1. Problem & User
