@@ -128,27 +128,36 @@ sns.heatmap(corr_matrix, mask=mask, annot=True, cmap="coolwarm", center=0,
 ax4.set_title("Correlation Matrix (Upper Triangle)")
 st.pyplot(fig4)
 
-# ==================== Visualization 5 ====================
+# ==================== Visualization 5: Industry Bubble Chart ====================
 st.subheader("5. Industry Bubble Chart: ESG Score vs Profit Margin (Size = Market Cap)")
+
 industry_agg = filtered.groupby("Industry").agg({
     "ESG_Overall": "mean",
     "ProfitMargin": "mean",
     "MarketCap": "mean"
 }).reset_index()
+industry_agg.dropna(inplace=True)
+
+# Use ranking to force visible size differences (even if raw values are close)
+industry_agg["Rank"] = industry_agg["MarketCap"].rank(method="dense")
+min_rank = industry_agg["Rank"].min()
+max_rank = industry_agg["Rank"].max()
+# Map rank to size range: min size = 150, max size = 500 (larger bubbles)
+sizes = 150 + (industry_agg["Rank"] - min_rank) / (max_rank - min_rank) * (500 - 150)
 
 fig5, ax5 = plt.subplots(figsize=(10, 6))
 scatter = ax5.scatter(
     industry_agg["ESG_Overall"], industry_agg["ProfitMargin"],
-    s=industry_agg["MarketCap"] / 1e6,   # Scale marker size to millions
-    alpha=0.6, c=range(len(industry_agg)), cmap="tab10"
+    s=sizes, alpha=0.6, c=range(len(industry_agg)), cmap="tab10"
 )
+
 for i, row in industry_agg.iterrows():
-    ax5.annotate(row["Industry"], (row["ESG_Overall"], row["ProfitMargin"]), fontsize=9)
+    ax5.annotate(row["Industry"], (row["ESG_Overall"], row["ProfitMargin"]), fontsize=10, ha='center')
+
 ax5.set_xlabel("Average ESG Overall Score")
 ax5.set_ylabel("Average Profit Margin (%)")
-ax5.set_title("Bubble size = Average Market Cap (million USD)")
+ax5.set_title("Bubble size = Market Cap (rank-based scaling, sizes 150-500)")
 st.pyplot(fig5)
-
 # ==================== Visualization 6 ====================
 st.subheader("6. Revenue vs Market Cap (Log-Log Scale with Correlation)")
 fig6, ax6 = plt.subplots(figsize=(8, 6))
