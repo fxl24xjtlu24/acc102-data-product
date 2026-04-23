@@ -42,5 +42,5 @@ streamlit run app.py
 · Cross-sectional data cannot infer causality
 · Missing control variables (firm size, leverage, R&D spending)
 · ESG scores from a single provider; results may not generalize
-· Next steps: panel data analysis, regression with industry fixed effects, statistical significance tests (t-test/ANOVA)
+
 · Next steps: panel data analysis, regression with industry fixed effects, statistical significance tests (t-test/ANOVA)
