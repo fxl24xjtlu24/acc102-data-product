@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scipy import stats
 
 # ---------- Page configuration ----------
 st.set_page_config(page_title="ESG & Financial Dashboard", layout="wide")
