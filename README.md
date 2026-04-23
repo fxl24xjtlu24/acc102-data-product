@@ -28,11 +28,13 @@ This project investigates whether a company's ESG (Environmental, Social, Govern
 
 ## 5. How to run
 pip install -r requirements.txt
+
 streamlit run app.py
 
 ## 6. Product link / Demo
 
-· GitHub repository: 
+· GitHub repository: https://github.com/fxl24xjtlu24/acc102-data-product.git
+
 · Demo video: 
 
 ## 7. Limitations & next steps
