@@ -1,4 +1,3 @@
-```markdown
 # ESG & Financial Performance Dashboard
 
 ## 1. Problem & User
@@ -28,24 +27,13 @@ This project investigates whether a company's ESG (Environmental, Social, Govern
 - Time trends show profit margins for all ESG categories remained relatively stable, with High ESG performing marginally better in recent years
 
 ## 5. How to run
-```bash
 pip install -r requirements.txt
 streamlit run app.py
-```
-
-Then open http://localhost:8501 in your browser.
-
-To run the analysis notebook:
-
-```bash
-jupyter notebook notebook.ipynb
-```
 
 ## 6. Product link / Demo
 
-· GitHub repository: https://github.com/your-username/acc102-data-product-main (replace with your actual URL)
-· Demo video: Submitted separately via Mediasite (1-3 minutes)
-· Local dashboard only – no public deployment. See app.py and notebook.ipynb for full analysis.
+· GitHub repository: 
+· Demo video: 
 
 ## 7. Limitations & next steps
 
