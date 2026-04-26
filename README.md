@@ -35,8 +35,6 @@ streamlit run app.py
 
 · GitHub repository: https://github.com/fxl24xjtlu24/acc102-data-product.git
 
-· Demo video: 
-
 ## 7. Limitations & next steps
 
 · Cross-sectional data cannot infer causality
